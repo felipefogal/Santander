@@ -8,4 +8,12 @@ Cenario: Realizar um novo calculo de prazo com sucesso
         E preencho os dados de calculo
         E seleciono a opcao de Calcular somente o prazo
     Entao devo ver os prazos exibidos na tela do app
+        E devo conseguir visualizar o meu calculo salvo
+
+Cenario: Acessar calculo salvo
+    Dado que estou na tela inicial do app
+        E clico em Calculos Salvos
+    Quando seleciono o meu calculo salvo
+        E clico para apagar calculo
+    Entao devo deixar de ver o calculo salvo
     

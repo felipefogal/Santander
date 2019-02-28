@@ -4,7 +4,7 @@ Dado(/^que estou na tela inicial do app$/) do
 end
   
 Quando(/^clico em Novo calculo$/) do
-    @homescreen.go_to_cep_page
+    @homescreen.go_to_newCalcs_page
 end
   
 Quando(/^preencho os dados de calculo$/) do
@@ -20,6 +20,15 @@ Quando(/^seleciono a opcao de Calcular somente o prazo$/) do
 end
 
 Entao(/^devo ver os prazos exibidos na tela do app$/) do
-    result_screen = ResultScreen.new(5)
-    result_screen.tap_salvar_button
+    @result_screen = ResultScreen.new(5)
+    @result_screen.tap_salvar_button
+end
+
+Entao("devo conseguir visualizar o meu calculo salvo") do
+    @result_screen.show_modal_salvar(5)
+    @result_screen.put_calcName('Teste')
+    @result_screen.tap_button_ok
+    @homescreen.tap_menuOptions_button
+    @homescreen.go_to_saveCalcs_page
+    calc_save_screen = CalcSaveScreen.new(5)
 end

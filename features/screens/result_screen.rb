@@ -15,5 +15,20 @@ class ResultScreen < BaseScreen
     def tap_salvar_button
         touch_element_for_id('action_salvar')
     end
-end
 
+    def show_modal_salvar(seconds = 5)
+        catch_for_id('title', seconds)
+        catch_for_id('tv_nome_calculo', seconds)
+        catch_for_id('ed_nome_calculo', seconds)
+        catch_for_id('bt_ok', seconds)
+        catch_for_id('bt_cancelar', seconds)
+    end
+
+    def put_calcName(calcName)
+        type_into_text_field_for_id('ed_nome_calculo', "#{calcName}")
+    end
+
+    def tap_button_ok
+        touch_element_for_id('bt_ok')
+    end
+end

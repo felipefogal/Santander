@@ -32,7 +32,7 @@ class BaseScreen
     end
 
     def catch_for_accessibility_id(accessibility_id, timeout)
-      $driver.wait_true(timeout) { $driver.exists { $driver.find_element :accessibility_id, accessibility_id } }
+      $driver.wait_true(timeout) { $driver.exists { $driver.find_elements :accessibility_id, accessibility_id } }
     rescue
       raise "Elemento de accessibility_id '#{accessibility_id}' nao encontrado"
     end
