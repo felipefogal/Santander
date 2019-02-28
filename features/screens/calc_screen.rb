@@ -16,8 +16,26 @@ class CalcScreen < BaseScreen
         touch_element_for_id('txt_cep_dest')
     end
 
-    def input_number_in_origem_testField
-        type_into_text_field_for_id('txt_cep_ori', 04306020)
+    def input_number_in_origem_testField(cep_origin)
+        sleep(1)
+        clear_element('txt_cep_ori')
+        sleep(1)
+        type_into_text_field_for_id('txt_cep_ori', "#{cep_origin}")
+    end
+
+    def input_number_in_destino_testField(cep_destinity)
+        sleep(1)
+        clear_element('txt_cep_dest')
+        sleep(1)
+        type_into_text_field_for_id('txt_cep_dest', "#{cep_destinity}")
+    end
+
+    def tap_somentePrazo_checkbox
+        touch_element_for_id('checkSoPrazo')
+    end
+
+    def tap_proximo_button
+        touch_element_for_id('button_prox')
     end
 
 end
