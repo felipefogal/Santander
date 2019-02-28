@@ -4,7 +4,6 @@ class CalcScreen < BaseScreen
         catch_for_id('txt_data', seconds)
         catch_for_id('txt_cep_ori', seconds)
         catch_for_id('txt_cep_dest', seconds)
-        catch_for_id('txt_cep_dest', seconds)
         catch_for_id('checkSoPrazo', seconds)
         catch_for_id('button_prox', seconds)
     end
@@ -13,9 +12,12 @@ class CalcScreen < BaseScreen
         touch_element_for_id('txt_cep_ori')
     end
 
-    def tap_origem
-        
+    def tap_detino_testField
+        touch_element_for_id('txt_cep_dest')
     end
 
+    def input_number_in_origem_testField
+        type_into_text_field_for_id('txt_cep_ori', 04306020)
+    end
 
 end
