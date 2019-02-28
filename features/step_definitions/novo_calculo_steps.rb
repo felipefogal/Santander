@@ -1,5 +1,6 @@
 Dado(/^que estou na tela inicial do app$/) do
-    homescreen = HomeScreen.new(15)
+    sleep(10)
+    homescreen = HomeScreen.new(5)
     homescreen.go_to_cep_page
 end
   
