@@ -19,10 +19,22 @@ class BaseScreen
       raise "Elemento de name '#{name}' nao encontrado"
     end
 
+    def catch_for_xpathName(xpathName, timeout)
+      $driver.wait_true(timeout) { $driver.exists { $driver.find_element :xpath, "//*[@name='#{xpathName}]" } }
+    rescue
+      raise "Elemento de name '#{xpathName}' nao encontrado"
+    end
+
     def catch_for_xpath(xpath, timeout)
       $driver.wait_true(timeout) { $driver.exists { $driver.find_element :xpath, xpath } }
     rescue
       raise "Elemento de xpath '#{xpath}' nao encontrado"
+    end
+
+    def catch_for_accessibility_id(accessibility_id, timeout)
+      $driver.wait_true(timeout) { $driver.exists { $driver.find_element :accessibility_id, accessibility_id } }
+    rescue
+      raise "Elemento de accessibility_id '#{accessibility_id}' nao encontrado"
     end
 
     # VALIDACAO DE IDS QUE NAO DEVEM EXISTIR EM TELA

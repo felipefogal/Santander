@@ -21,5 +21,5 @@ end
 
 Entao(/^devo ver os prazos exibidos na tela do app$/) do
     result_screen = ResultScreen.new(5)
-    # result_screen.
+    result_screen.tap_salvar_button
 end
