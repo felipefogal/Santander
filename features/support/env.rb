@@ -12,18 +12,23 @@ require 'rspec/expectations'
 class AppiumWorld
 end
 
+# # Load the desired configuration from appium.txt, create a driver then
+# # Add the methods to the world
+# caps_path = File.join(File.dirname(__FILE__), 'appium.txt')
+# caps = Appium.load_appium_txt file: caps_path, verbose: true
+# Appium::Driver.new(caps, true)
+
+# Load the desired configuration from appium.txt, create a driver then
+# Add the methods to the world
+# arquivo antigo funcionando anteriormente
 caps_path = File.join(File.dirname(__FILE__), '..', '..', 'caps')
-caps_file = File.join(caps_path, "#{ENV['VERSION']}.txt")
+caps_file = File.join(caps_path, "appium.txt")
 caps = Appium.load_appium_txt file: caps_file, verbose: true
 Appium::Driver.new(caps, true)
 Appium.promote_appium_methods AppiumWorld
 
 Before do |scenario|
     $driver.start_driver
-    $driver.alert_accept
-
-    scenario_tags = scenario.source_tag_names
-    
 end
     
 After do |scenario|
@@ -59,6 +64,7 @@ After do |scenario|
     end
 
     $driver.driver_quit
+    
 
 end
 

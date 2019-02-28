@@ -1,7 +1,0 @@
-[caps]
-deviceName = "emulator-5554"
-platformName = "Android"
-app = "/Users/felipefogal/workspace/Tests/Santander/TesteQA/calculaprecoprazo.apk"
-appPackage = "br.com.correios.calculaprecoprazo"
-appActivity = "br.com.correios.calculaprecoprazo.activity.MainActivity"
-no_reset = "true"
