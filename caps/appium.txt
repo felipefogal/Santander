@@ -1,0 +1,6 @@
+[caps]
+deviceName = "emulator-5554"
+platformName = "Android"
+app = "/Users/felipefogal/workspace/Tests/Santander/TesteQA/calculaprecoprazo.apk"
+
+no_reset = "true"
