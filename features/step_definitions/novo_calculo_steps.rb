@@ -30,5 +30,5 @@ Entao("devo conseguir visualizar o meu calculo salvo") do
     @result_screen.tap_button_ok
     @homescreen.tap_menuOptions_button
     @homescreen.go_to_saveCalcs_page
-    calc_save_screen = CalcSaveScreen.new(5)
+    @calc_save_screen = CalcSaveScreen.new(5)
 end

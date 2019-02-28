@@ -13,7 +13,6 @@ Cenario: Realizar um novo calculo de prazo com sucesso
 Cenario: Acessar calculo salvo
     Dado que estou na tela inicial do app
         E clico em Calculos Salvos
-    Quando seleciono o meu calculo salvo
-        E clico para apagar calculo
+    Quando seleciono e apago o meu calculo salvo anteriormente
     Entao devo deixar de ver o calculo salvo
     
