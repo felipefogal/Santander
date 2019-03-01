@@ -2,6 +2,6 @@
 deviceName = "emulator-5554"
 platformName = "Android"
 automationName = "UiAutomator"
-app = "/Users/felipefogal/workspace/Tests/Santander/TesteQA/calculaprecoprazo.apk"
+app = "/Users/felipefogal/workspace/Tests/Santander_TesteQA_FelipeFogal/TesteQA/calculaprecoprazo.apk"
 
 no_reset = "false"

@@ -14,6 +14,12 @@ Excutar o comando:
 bundle install
 ```
 
+
+# Configuração do arquivo appium.txt
+
+Altere o parametro `app` para o caminho completo do app, como em `/Users/felipefogal/workspace/Tests/Santander_TesteQA_FelipeFogal/TesteQA/calculaprecoprazo.apk`.
+
+
 # Execução dos Testes
 
 1. Iniciar o Appium

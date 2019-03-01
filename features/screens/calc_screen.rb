@@ -39,4 +39,8 @@ class CalcScreen < BaseScreen
         sleep(15)
     end
 
+    def cep_origem_error(seconds = 5)
+        id_not_exists_in_screen(seconds, 'action_salvar')
+    end
+
 end
