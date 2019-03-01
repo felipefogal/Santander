@@ -28,9 +28,14 @@ Altere o parametro `app` para o caminho completo do app, como em `/Users/felipef
 4. Executar o comando:
 
 ```
-cucumber
+bundle exec cucumber
 ```
 
 # Reports
 
 Os relatórios são criados automaticamente na pasta `/reports`
+
+
+# Prova QA
+
+As anotações dos bugs estão descritas no próprio arquivo. 
