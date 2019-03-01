@@ -4,6 +4,7 @@ Dado("clico em Calculos Salvos") do
 end
   
 Quando("seleciono e apago o meu calculo salvo anteriormente") do
+    @calc_save_screen = CalcSaveScreen.new(5)
     @calc_save_screen.select_save_option
     @calc_save_screen.tap_delete_option
 end

@@ -10,9 +10,12 @@ Cenario: Realizar um novo calculo de prazo com sucesso
     Entao devo ver os prazos exibidos na tela do app
         E devo conseguir visualizar o meu calculo salvo
 
+@creating_data
 Cenario: Acessar calculo salvo
     Dado que estou na tela inicial do app
         E clico em Calculos Salvos
     Quando seleciono e apago o meu calculo salvo anteriormente
     Entao devo deixar de ver o calculo salvo
-    
+
+Cenario: Realizar um novo calculo sem preencher cep origem
+    Dado que estou na tela inicial do app

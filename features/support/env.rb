@@ -29,6 +29,18 @@ Appium.promote_appium_methods AppiumWorld
 
 Before do |scenario|
     $driver.start_driver
+
+    scenario_tags = scenario.source_tag_names
+    if scenario_tags.include?('@creating_data')
+        steps %{
+            Dado que estou na tela inicial do app
+                Quando clico em Novo calculo
+                    E preencho os dados de calculo
+                    E seleciono a opcao de Calcular somente o prazo
+                Entao devo ver os prazos exibidos na tela do app
+                    E devo conseguir visualizar o meu calculo salvo
+        }
+    end
 end
     
 After do |scenario|

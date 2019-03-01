@@ -36,6 +36,7 @@ class CalcScreen < BaseScreen
 
     def tap_proximo_button
         touch_element_for_id('button_prox')
+        sleep(15)
     end
 
 end
